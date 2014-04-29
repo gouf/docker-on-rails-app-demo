@@ -1,0 +1,12 @@
+FROM tcnksm/rbenv
+
+ENV PATH /usr/local/rbenv/bin:$PATH
+
+RUN apt-get update -y
+RUN apt-get upgrade -y --force-yes
+RUN apt-get install -y --force-yes sqlite3 libsqlite3-dev
+RUN apt-get install -y --force-yes nodejs
+
+RUN chmod +x /etc/profile.d/rbenv.sh
+
+ONBUILD RUN git clone https://github.com/gouf/rails-sample-app.git
