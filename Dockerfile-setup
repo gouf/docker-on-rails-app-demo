@@ -1,4 +1,4 @@
-FROM tcnksm/rbenv
+FROM innocentzero/rbenv
 
 ENV PATH /usr/local/rbenv/bin:$PATH
 
