@@ -1,4 +1,5 @@
-FROM innocentzero/rails-app
+FROM innocentzero/rails-app-demo
 EXPOSE 3000
 
+WORKDIR /rails-sample-app
 ENTRYPOINT /bin/bash -l -c /rails-sample-app/starter.sh
